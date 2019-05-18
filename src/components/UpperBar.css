@@ -3,3 +3,21 @@
   height: 121px;
   background: #FFA1B2;
 }
+
+h1#brand-name {
+  position:   absolute;
+  height:     inherit;
+  display:    flex;
+  width:      286px;
+  left:       70px;
+  margin:     0;
+  
+  font-family:  'Lily Script One', cursive;
+  font-style:   normal;
+  font-weight:  normal;
+  align-items:  center;
+  font-size:    51px;
+  letter-spacing: -0.02em;
+
+  color:      rgba(0, 0, 0, 0.79);
+}
