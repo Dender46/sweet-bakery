@@ -8,8 +8,7 @@ h1#brand-name {
   position:   absolute;
   height:     inherit;
   display:    flex;
-  width:      286px;
-  left:       70px;
+  left:       185px;
   margin:     0;
   
   font-family:  'Lily Script One', cursive;
@@ -20,4 +19,28 @@ h1#brand-name {
   letter-spacing: -0.02em;
 
   color:      rgba(0, 0, 0, 0.79);
+}
+
+div#bg-drip-left {
+  position:   absolute;
+  left:       78.28%;
+  right:      19.79%;
+
+  width:      37px;
+  height:     222px;
+
+  background:   #FFA1B2;
+  border-radius:  40px;
+}
+
+div#bg-drip-right {
+  position:   absolute;
+  left:       81.98%;
+  right:      15.62%;
+
+  width:      46px;
+  height:     278px;
+
+  background:   #FFA1B2;
+  border-radius:  40px;
 }
