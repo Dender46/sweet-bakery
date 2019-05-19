@@ -1,0 +1,23 @@
+.Avatar {
+  position: 			absolute;
+  width:    			130px;
+  height:   			63px;
+  left:     			1507px;
+
+  display:      	flex;
+  align-items:  	center;
+}
+
+.avatar-icon {
+	width: 					63px;
+	height:					63px;
+
+  background:		#fff;
+  border-radius:	45px;
+}
+
+.material-icons.expand_more {
+	font-size: 			36px;
+	margin-left:		12px;
+	color: 					rgba(0, 0, 0, 0.6);
+}

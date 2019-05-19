@@ -1,6 +1,8 @@
 import React from 'react';
 import './UpperBar.css';
 
+import Avatar from './Avatar';
+
 const UpperBar: React.FC = () => {
   return (
     <div className="UpperBar">
@@ -8,6 +10,7 @@ const UpperBar: React.FC = () => {
 
       <div id="bg-drip-left"></div>
       <div id="bg-drip-right"></div>
+      <Avatar />
     </div>
   );
 }
