@@ -8,6 +8,13 @@
 
   border-radius: 26px;
 
+  animation: opacityChange 400ms ease-in-out;
+
   background: #FFFFFF;
   box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes opacityChange {
+  from  { opacity: 0%; }
+  to    { opacity: 100%; }
 }

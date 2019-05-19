@@ -1,14 +1,14 @@
 import React from 'react';
 import './ProfilePopup.css';
 
-class ProfilePopup extends React.Component {
-  state = {
-    open: false
-  };
+type ProfilePopupProps = {
+  opacity: number
+}
 
+class ProfilePopup extends React.Component<ProfilePopupProps> {
   render() {
     return (
-      <div className="ProfilePopup">
+      <div className="ProfilePopup" style={{opacity: this.props.opacity}}>
   
       </div>
     );
