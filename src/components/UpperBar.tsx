@@ -3,16 +3,22 @@ import './UpperBar.css';
 
 import Avatar from './Avatar';
 
-const UpperBar: React.FC = () => {
-  return (
-    <div className="UpperBar">
-      <h1 id="brand-name">Sweet Bakery</h1>
+type UpperBarProps = {
+  toggleProfilePopup: Function
+}
 
-      <div id="bg-drip-left"></div>
-      <div id="bg-drip-right"></div>
-      <Avatar />
-    </div>
-  );
+class UpperBar extends React.Component<UpperBarProps> {
+  render() {
+    return (
+      <div className="UpperBar">
+        <h1 id="brand-name">Sweet Bakery</h1>
+
+        <div id="bg-drip-left"></div>
+        <div id="bg-drip-right"></div>
+        <Avatar toggleProfilePopup={this.props.toggleProfilePopup}/>
+      </div>
+    );
+  }
 }
 
 export default UpperBar;

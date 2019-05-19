@@ -8,6 +8,10 @@
   align-items:  	center;
 }
 
+.Avatar:hover {
+  cursor:         pointer;
+}
+
 .avatar-icon {
 	width: 					63px;
 	height:					63px;
