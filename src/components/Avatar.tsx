@@ -7,7 +7,7 @@ import avatar from '../images/avatar-icon.jpg';
 const Avatar: React.FC = () => {
   return (
     <div className="Avatar">
-      <img src={avatar} alt="Profile picture" className="avatar-icon" />
+      <img src={avatar} alt="Profile" className="avatar-icon" />
       <i className="material-icons md-dark expand_more">expand_more</i>
     </div>
   );
