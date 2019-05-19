@@ -5,14 +5,14 @@ import UpperBar from './components/UpperBar'
 import ProfilePopup from './components/ProfilePopup';
 
 type AppState = {
-  profilePopupVisible: number
+  profilePopupOpacity: number
 }
 
 class App extends React.Component<{}, AppState> {
   constructor(props: Object) {
     super(props);
     this.state = {
-      profilePopupVisible: 0
+      profilePopupOpacity: 0
     }
     this.toggleProfilePopup = this.toggleProfilePopup.bind(this);
   }
@@ -21,15 +21,15 @@ class App extends React.Component<{}, AppState> {
     return (
       <div className="App">
         <UpperBar toggleProfilePopup={this.toggleProfilePopup}/>
-        <ProfilePopup opacity={this.state.profilePopupVisible}/>
+        <ProfilePopup opacity={this.state.profilePopupOpacity}/>
       </div>
     );
   }
 
   toggleProfilePopup = (e: Event) => {
     this.setState({
-      profilePopupVisible: this.state.profilePopupVisible == 0 ? 100 : 0
-    })
+      profilePopupOpacity: this.state.profilePopupOpacity == 0 ? 100 : 0
+    });
   }
 }
 
