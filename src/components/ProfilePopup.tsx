@@ -13,6 +13,7 @@ type ProfilePopupState = {
 }
 
 class ProfilePopup extends React.Component<ProfilePopupProps, ProfilePopupState> {
+
   constructor(props: ProfilePopupProps) {
     super(props);
     this.state = {
@@ -21,18 +22,6 @@ class ProfilePopup extends React.Component<ProfilePopupProps, ProfilePopupState>
         opacity: 0
       }
     };
-  }
-
-  render() {
-    return (
-      this.state.show && <div 
-        className="ProfilePopup"
-        style={this.state.style}
-        onTransitionEnd={this.transitionEnd}
-      >
-  
-      </div>
-    );
   }
 
   mountStyle = () => {
@@ -74,6 +63,18 @@ class ProfilePopup extends React.Component<ProfilePopupProps, ProfilePopupState>
         show: false
       })
     }
+  }
+
+  render() {
+    return (
+      this.state.show && <div 
+        className="ProfilePopup"
+        style={this.state.style}
+        onTransitionEnd={this.transitionEnd}
+      >
+  
+      </div>
+    );
   }
 
 }
