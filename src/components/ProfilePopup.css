@@ -7,9 +7,9 @@
   height:         360px;
   border-radius:  26px;
 
-  visibility:     hidden;
+  opacity:        0;
   transition:     opacity 0.4s ease-in-out;
 
-  background: #FFFFFF;
-  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
+  background:     #FFFFFF;
+  box-shadow:     0px 6px 30px rgba(0, 0, 0, 0.1);
 }

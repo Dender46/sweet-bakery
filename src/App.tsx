@@ -5,14 +5,14 @@ import UpperBar from './components/UpperBar'
 import ProfilePopup from './components/ProfilePopup';
 
 type AppState = {
-  profilePopupOpacity: number
+  mountProfilePopup: boolean
 }
 
 class App extends React.Component<{}, AppState> {
   constructor(props: Object) {
     super(props);
     this.state = {
-      profilePopupOpacity: 0
+      mountProfilePopup: false
     }
     this.toggleProfilePopup = this.toggleProfilePopup.bind(this);
   }
@@ -21,14 +21,14 @@ class App extends React.Component<{}, AppState> {
     return (
       <div className="App">
         <UpperBar toggleProfilePopup={this.toggleProfilePopup}/>
-        <ProfilePopup opacity={this.state.profilePopupOpacity}/>
+        <ProfilePopup mounted={this.state.mountProfilePopup}/>
       </div>
     );
   }
 
   toggleProfilePopup = (e: Event) => {
     this.setState({
-      profilePopupOpacity: this.state.profilePopupOpacity == 0 ? 100 : 0
+      mountProfilePopup: !this.state.mountProfilePopup
     });
   }
 }

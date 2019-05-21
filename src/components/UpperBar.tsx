@@ -19,6 +19,7 @@ class UpperBar extends React.Component<UpperBarProps> {
       </div>
     );
   }
+  
 }
 
 export default UpperBar;

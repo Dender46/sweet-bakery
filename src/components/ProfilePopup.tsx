@@ -2,40 +2,80 @@ import React from 'react';
 import './ProfilePopup.css';
 
 type ProfilePopupProps = {
-  opacity: number
+  mounted: boolean
 }
 
-class ProfilePopup extends React.Component<ProfilePopupProps, {visibility: any}> {
+type ProfilePopupState = {
+  show: boolean,
+  style: {
+    opacity:    number
+  }
+}
+
+class ProfilePopup extends React.Component<ProfilePopupProps, ProfilePopupState> {
   constructor(props: ProfilePopupProps) {
     super(props);
     this.state = {
-      visibility: 'hidden'
+      show: false,
+      style: {
+        opacity: 0
+      }
     };
   }
-  
+
   render() {
     return (
-      <div className="ProfilePopup"
-        style={{
-          opacity:    this.props.opacity,
-          visibility: this.state.visibility
-        }}
+      this.state.show && <div 
+        className="ProfilePopup"
+        style={this.state.style}
+        onTransitionEnd={this.transitionEnd}
       >
   
       </div>
     );
   }
 
-  componentDidUpdate(prevProps: ProfilePopupProps, visibility: any) {
-    if(prevProps.opacity !== this.props.opacity) {
-      if (this.props.opacity == 0)
-        setTimeout(() => 
-          this.setState({visibility: 'hidden'})
-        , 400);
-      else
-        this.setState({visibility: 'visible'});
+  mountStyle = () => {
+    if (!this.props.mounted)
+      return;
+    
+    this.setState({
+      style: {
+        opacity: 1
+      }
+    })
+  }
+
+  unMountStyle = () => {
+    this.setState({
+      style: {
+        opacity: 0
+      }
+    })
+  }
+
+  componentDidMount = () => {
+    setTimeout(this.mountStyle, 10);
+  }
+
+  componentWillReceiveProps(newProps:ProfilePopupProps) {
+    if (!newProps.mounted)
+      return this.unMountStyle();
+
+    this.setState({
+      show: true
+    });
+    setTimeout(this.mountStyle, 10);
+  }
+
+  transitionEnd = () => {
+    if(!this.props.mounted){ // remove the node on transition end when the mounted prop is false
+      this.setState({
+        show: false
+      })
     }
   }
+
 }
 
 export default ProfilePopup;
