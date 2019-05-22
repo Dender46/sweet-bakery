@@ -1,0 +1,32 @@
+.SideBarElement {
+  display:      flex;
+  align-items:  center;
+
+  position:     absolute;
+  width:        225px;
+  height:       60px;
+  left:         215px;
+  top:          160px;
+}
+
+h3.section-name {
+  font-family:  Noto Sans JP;
+  font-style:   normal;
+  font-weight:  normal;
+  font-size:    24px;
+
+  display:      flex;
+  align-items:  center;
+  
+  color:        #4F4F4F;
+}
+
+.material-icons.expand_more {
+  position:     absolute;
+  right:        0;
+  
+  font-size: 		34px;
+  margin-top:   1px;
+
+  color: 				#818181;
+}

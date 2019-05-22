@@ -18,9 +18,9 @@ h1#brand-name {
   font-weight:  normal;
   align-items:  center;
   font-size:    51px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.05em;
 
-  color:      rgba(0, 0, 0, 0.79);
+  color:      #3A2528;
 }
 
 div#bg-drip-left {

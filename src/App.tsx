@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 
 import UpperBar from './components/UpperBar'
+import SideBar from './components/SideBar';
+
 import ProfilePopup from './components/ProfilePopup';
 
 type AppState = {
@@ -24,6 +26,7 @@ class App extends React.Component<{}, AppState> {
     return (
       <div className="App">
         <UpperBar toggleProfilePopup={this.toggleProfilePopup}/>
+        <SideBar />
         <div ref={this.profilePopupRef}>
           <ProfilePopup mounted={this.state.mountProfilePopup}/>
         </div>
@@ -42,7 +45,7 @@ class App extends React.Component<{}, AppState> {
     };
     
     // Open ProfilePopup:
-    if (this.state.mountProfilePopup == true)
+    if (this.state.mountProfilePopup === true)
       return;
     
     document.addEventListener('mousedown', this.toggleProfilePopup);
