@@ -25,9 +25,8 @@ h1#brand-name {
 
 div#bg-drip-left {
   position:   absolute;
-  left:       78.28%;
-  right:      19.79%;
-  top:          0;
+  right: 380px;
+  top: 0px;
 
   width:      37px;
   height:     222px;
@@ -38,9 +37,9 @@ div#bg-drip-left {
 
 div#bg-drip-right {
   position:   absolute;
-  left:       81.98%;
-  right:      15.62%;
-  top:          0;
+  right: 300px;
+  top: 0%;
+  bottom: 68.94%;
 
   width:      46px;
   height:     278px;

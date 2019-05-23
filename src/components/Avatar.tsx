@@ -13,7 +13,7 @@ class Avatar extends React.Component<AvatarProps> {
     return (
       <div className="Avatar" onClick={() => this.props.toggleProfilePopup()}>
         <img src={avatar} alt="Profile" className="avatar-icon" />
-        <i className="material-icons md-dark expand_more">expand_more</i>
+        <i className="down-arrow material-icons expand_more">expand_more</i>
       </div>
     );
   }
