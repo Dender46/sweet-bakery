@@ -7,6 +7,10 @@
   margin-bottom:  12px;
 }
 
+.SideBarElement:hover {
+  cursor:         pointer;
+}
+
 h3.section-name {
   font-family:  Noto Sans JP;
   font-style:   normal;

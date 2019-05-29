@@ -10,10 +10,10 @@ type Props = {
 class SideBarElement extends React.Component<Props> {
   render() {
     return (
-      <span className="SideBarElement">
+      <div className="SideBarElement">
         <h3 className="section-name">{this.props.caption}</h3>
         <i className="material-icons md-dark expand_more">chevron_right</i>
-      </span>
+      </div>
     );
   }
 }
