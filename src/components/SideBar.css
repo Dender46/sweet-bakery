@@ -1,4 +1,7 @@
 .SideBar {
+  display: flex;
+  flex-direction: column;
+
   position: absolute;
   width: 231px;
   height: 346.9px;
