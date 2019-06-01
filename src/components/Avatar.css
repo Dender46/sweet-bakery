@@ -3,7 +3,6 @@
   width:    			110px;
   height:   			63px;
   right:          303px;
-  top:            27px;
 
   display:      	flex;
   align-items:  	center;
@@ -28,4 +27,20 @@
 
   margin:         0;
 	color: 					#664047;
+}
+
+@media (max-width: 1600px) { 
+  .Avatar {
+    width: 95px;
+    right: 135px;
+  }
+
+  .avatar-icon {
+    width: 		48px;
+    height:		48px;
+  }
+
+  .down-arrow.material-icons.expand_more {
+    font-size:   28px;
+  }
 }

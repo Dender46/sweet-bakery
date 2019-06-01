@@ -1,0 +1,23 @@
+.Product {
+
+    position: relative;
+    width: 250px;
+    height: 350px;
+    
+    box-shadow: 2px 4px 12px rgba(95, 17, 31, 0.15);
+    background: #FFFFFF;
+    border-radius: 16px;
+}
+
+.Product .prod-image {
+    position: absolute;
+    width: 250px;
+    height: 259px;
+    left: 0px;
+    top: 0px;
+
+    border-radius: 16px 16px 0px 0px;
+
+    object-fit: cover;
+	overflow: hidden;
+}
