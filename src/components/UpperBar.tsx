@@ -5,7 +5,7 @@ import './Avatar.css';
 import 'material-design-icons/iconfont/material-icons.css';
 import avatar from '../images/avatar-icon.jpg';
 
-class UpperBar extends React.Component<{toggleProfilePopup: Function}> {
+class UpperBar extends React.Component<{ toggleProfilePopup: Function }> {
   render() {
     return (
       <div className="UpperBar">
@@ -13,14 +13,14 @@ class UpperBar extends React.Component<{toggleProfilePopup: Function}> {
 
         <div id="bg-drip-left"></div>
         <div id="bg-drip-right"></div>
-        <Avatar toggleProfilePopup={this.props.toggleProfilePopup}/>
+        <Avatar toggleProfilePopup={this.props.toggleProfilePopup} />
       </div>
     );
   }
 
 }
 
-class Avatar extends React.Component<{toggleProfilePopup: Function}> {
+class Avatar extends React.Component<{ toggleProfilePopup: Function }> {
   render() {
     return (
       <div className="Avatar" onClick={() => this.props.toggleProfilePopup()}>

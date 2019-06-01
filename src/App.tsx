@@ -11,8 +11,8 @@ type AppState = {
 }
 
 class App extends React.Component<{}, AppState> {
-  
-  private profilePopupRef : React.RefObject<HTMLDivElement>;
+
+  private profilePopupRef: React.RefObject<HTMLDivElement>;
 
   constructor(props: Object) {
     super(props);
@@ -25,10 +25,10 @@ class App extends React.Component<{}, AppState> {
   render() {
     return (
       <div className="App">
-        <UpperBar toggleProfilePopup={this.toggleProfilePopup}/>
+        <UpperBar toggleProfilePopup={this.toggleProfilePopup} />
         <SideBar />
         <div ref={this.profilePopupRef}>
-          <ProfilePopup mounted={this.state.mountProfilePopup}/>
+          <ProfilePopup mounted={this.state.mountProfilePopup} />
         </div>
       </div>
     );
@@ -43,11 +43,11 @@ class App extends React.Component<{}, AppState> {
       });
       return;
     };
-    
+
     // Open ProfilePopup:
     if (this.state.mountProfilePopup === true)
       return;
-    
+
     document.addEventListener('mousedown', this.toggleProfilePopup);
     this.setState({
       mountProfilePopup: true

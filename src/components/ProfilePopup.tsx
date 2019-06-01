@@ -1,19 +1,21 @@
-import React from 'react';
-import './ProfilePopup.css';
+import React from "react";
+import "./ProfilePopup.css";
 
 type ProfilePopupProps = {
-  mounted: boolean
-}
+  mounted: boolean;
+};
 
 type ProfilePopupState = {
-  show: boolean,
+  show: boolean;
   style: {
-    opacity:    number
-  }
-}
+    opacity: number;
+  };
+};
 
-class ProfilePopup extends React.Component<ProfilePopupProps, ProfilePopupState> {
-
+class ProfilePopup extends React.Component<
+  ProfilePopupProps,
+  ProfilePopupState
+> {
   constructor(props: ProfilePopupProps) {
     super(props);
     this.state = {
@@ -25,31 +27,29 @@ class ProfilePopup extends React.Component<ProfilePopupProps, ProfilePopupState>
   }
 
   mountStyle = () => {
-    if (!this.props.mounted)
-      return;
-    
+    if (!this.props.mounted) return;
+
     this.setState({
       style: {
         opacity: 1
       }
-    })
-  }
+    });
+  };
 
   unMountStyle = () => {
     this.setState({
       style: {
         opacity: 0
       }
-    })
-  }
+    });
+  };
 
   componentDidMount = () => {
     setTimeout(this.mountStyle, 10);
-  }
+  };
 
-  componentWillReceiveProps(newProps:ProfilePopupProps) {
-    if (!newProps.mounted)
-      return this.unMountStyle();
+  componentWillReceiveProps(newProps: ProfilePopupProps) {
+    if (!newProps.mounted) return this.unMountStyle();
 
     this.setState({
       show: true
@@ -58,25 +58,25 @@ class ProfilePopup extends React.Component<ProfilePopupProps, ProfilePopupState>
   }
 
   transitionEnd = () => {
-    if(!this.props.mounted){ // remove the node on transition end when the mounted prop is false
+    if (!this.props.mounted) {
+      // remove the node on transition end when the mounted prop is false
       this.setState({
         show: false
-      })
+      });
     }
-  }
+  };
 
   render() {
     return (
-      this.state.show && <div 
-        className="ProfilePopup"
-        style={this.state.style}
-        onTransitionEnd={this.transitionEnd}
-      >
-  
-      </div>
+      this.state.show && (
+        <div
+          className="ProfilePopup"
+          style={this.state.style}
+          onTransitionEnd={this.transitionEnd}
+        />
+      )
     );
   }
-
 }
 
 export default ProfilePopup;
