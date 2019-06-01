@@ -1,13 +1,11 @@
 import React from 'react';
 import './UpperBar.css';
+import './Avatar.css';
 
-import Avatar from './Avatar';
+import 'material-design-icons/iconfont/material-icons.css';
+import avatar from '../images/avatar-icon.jpg';
 
-type UpperBarProps = {
-  toggleProfilePopup: Function
-}
-
-class UpperBar extends React.Component<UpperBarProps> {
+class UpperBar extends React.Component<{toggleProfilePopup: Function}> {
   render() {
     return (
       <div className="UpperBar">
@@ -19,7 +17,18 @@ class UpperBar extends React.Component<UpperBarProps> {
       </div>
     );
   }
-  
+
+}
+
+class Avatar extends React.Component<{toggleProfilePopup: Function}> {
+  render() {
+    return (
+      <div className="Avatar" onClick={() => this.props.toggleProfilePopup()}>
+        <img src={avatar} alt="Profile" className="avatar-icon" />
+        <i className="down-arrow material-icons expand_more">expand_more</i>
+      </div>
+    );
+  }
 }
 
 export default UpperBar;
