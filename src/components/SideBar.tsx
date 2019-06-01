@@ -1,5 +1,5 @@
 import React from 'react';
-import './SideBarElement.css';
+import './SideBar.css';
 import 'material-design-icons/iconfont/material-icons.css';
 
 const sidebarCaptions: Array<String> = [
