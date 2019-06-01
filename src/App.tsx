@@ -3,14 +3,11 @@ import './App.css';
 
 import UpperBar from './components/UpperBar'
 import SideBar from './components/SideBar';
-
 import ProfilePopup from './components/ProfilePopup';
 
-type AppState = {
-  mountProfilePopup: boolean
-}
+import Product from './components/Product';
 
-class App extends React.Component<{}, AppState> {
+class App extends React.Component<{}, {mountProfilePopup: boolean}> {
 
   private profilePopupRef: React.RefObject<HTMLDivElement>;
 
@@ -29,6 +26,9 @@ class App extends React.Component<{}, AppState> {
         <SideBar />
         <div ref={this.profilePopupRef}>
           <ProfilePopup mounted={this.state.mountProfilePopup} />
+        </div>
+        <div className="products-container">
+          <Product />
         </div>
       </div>
     );
