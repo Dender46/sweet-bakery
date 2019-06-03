@@ -10,8 +10,8 @@ const sidebarCaptions: Array<String> = [
   "Cookies"
 ];
 
-class SideBar extends React.Component {
-  style: React.CSSProperties = {
+function SideBar() {
+  const style: React.CSSProperties = {
     display: "flex",
     flexDirection: "column",
     position: "absolute",
@@ -21,26 +21,22 @@ class SideBar extends React.Component {
     top: "159px"
   };
 
-  render() {
-    return (
-      <div className="SideBar" style={this.style}>
-        {sidebarCaptions.map((caption, index) => (
-          <SideBarElement caption={caption} key={index} />
-        ))}
-      </div>
-    );
-  }
+  return (
+    <div className="SideBar" style={style}>
+      {sidebarCaptions.map((caption, index) => (
+        <SideBarElement caption={caption} key={index} />
+      ))}
+    </div>
+  );
 }
 
-class SideBarElement extends React.Component<{ caption: String }> {
-  render() {
-    return (
-      <div className="SideBarElement">
-        <h3 className="section-name">{this.props.caption}</h3>
-        <i className="material-icons md-dark expand_more">chevron_right</i>
-      </div>
-    );
-  }
+function SideBarElement (props : { caption : String }) {
+  return (
+    <div className="SideBarElement">
+      <h3 className="section-name">{props.caption}</h3>
+      <i className="material-icons md-dark expand_more">chevron_right</i>
+    </div>
+  );
 }
 
 export default SideBar;
