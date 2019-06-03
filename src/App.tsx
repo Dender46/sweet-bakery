@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 
 import UpperBar from './components/UpperBar'
@@ -7,51 +7,38 @@ import ProfilePopup from './components/ProfilePopup';
 
 import Product from './components/Product';
 
-class App extends React.Component<{}, {mountProfilePopup: boolean}> {
+function App () {
 
-  private profilePopupRef: React.RefObject<HTMLDivElement>;
+  const [mountProfilePopup, setMountProfilePopup] = useState(false);
+  const profilePopupRef: React.RefObject<HTMLDivElement> = React.useRef(null);
 
-  constructor(props: Object) {
-    super(props);
-    this.state = {
-      mountProfilePopup: false
-    }
-    this.profilePopupRef = React.createRef();
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <UpperBar toggleProfilePopup={this.toggleProfilePopup} />
-        <SideBar />
-        <div ref={this.profilePopupRef}>
-          <ProfilePopup mounted={this.state.mountProfilePopup} />
-        </div>
-        <div className="products-container">
-          <Product />
-        </div>
+  return (
+    <div className="App">
+      <UpperBar toggleProfilePopup={toggleProfilePopup} />
+      <SideBar />
+      <div ref={profilePopupRef}>
+        <ProfilePopup mounted={mountProfilePopup}/>
       </div>
-    );
-  }
+      <div className="products-container">
+        <Product />
+      </div>
+    </div>
+  );
 
-  toggleProfilePopup = (e: Event) => {
+  function toggleProfilePopup(e: Event) {
     // close ProfilePopup:
-    if (e && e.target && this.profilePopupRef.current && !this.profilePopupRef.current.contains(e.target as HTMLDivElement)) {
-      document.removeEventListener('mousedown', this.toggleProfilePopup);
-      this.setState({
-        mountProfilePopup: false
-      });
+    if (e && e.target && profilePopupRef.current && !profilePopupRef.current.contains(e.target as HTMLDivElement)) {
+      document.removeEventListener('mousedown', toggleProfilePopup);
+      setMountProfilePopup(false);
       return;
     };
 
     // Open ProfilePopup:
-    if (this.state.mountProfilePopup === true)
+    if (mountProfilePopup === true)
       return;
 
-    document.addEventListener('mousedown', this.toggleProfilePopup);
-    this.setState({
-      mountProfilePopup: true
-    });
+    document.addEventListener('mousedown', toggleProfilePopup);
+    setMountProfilePopup(true);
   }
 }
 
