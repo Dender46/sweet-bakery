@@ -24,9 +24,9 @@
 }
 .products-container {
   position: absolute;
-  width: 818px;
   height: 745px;
-  left: calc(50% - 818px/2);
+  left: 28.7%;
+  right: 28.7%;
   top: 159px;
 }
 

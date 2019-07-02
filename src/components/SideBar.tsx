@@ -12,13 +12,13 @@ const sidebarCaptions: Array<String> = [
 
 function SideBar() {
   const style: React.CSSProperties = {
-    display: "flex",
-    flexDirection: "column",
     position: "absolute",
-    width: "231px",
     height: "346.9px",
-    left: "215px",
-    top: "159px"
+    left: "11.2%",
+    right: "76.77%",
+    top: "159px",
+
+    minWidth: "155px"
   };
 
   return (
