@@ -1,12 +1,12 @@
 import React from 'react';
 import './Product.css';
 
-function Product() {
+function Product( props : {image: String, title:String} ) {
     return (
         <div className="Product">
-            <img className="prod-image" alt="" src="images/cakes/cake0.jpg"/>
+            <img className="prod-image" alt="" src={"images/cakes/" + props.image}/>
             <br />
-            <h2  className="prod-title" > Product name </h2>
+            <h2  className="prod-title" > {props.title} </h2>
             <i className="info-button material-icons" >info_outline</i>
         </div>
     )

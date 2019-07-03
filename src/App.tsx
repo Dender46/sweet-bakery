@@ -12,6 +12,13 @@ function App () {
   const [mountProfilePopup, setMountProfilePopup] = useState(false);
   const profilePopupRef: React.RefObject<HTMLDivElement> = React.useRef(null);
 
+  const productsInfo: Array<{image: String, title : String}> = [
+    {image: 'cake0.jpg', title: 'Prod. name'},
+    {image: 'cake1.jpg', title: 'Prod. name'},
+    {image: 'cake2.jpg', title: 'Prod. name'},
+    {image: 'cake3.jpg', title: 'Prod. name'}
+  ];
+
   return (
     <div className="App">
       <UpperBar toggleProfilePopup={toggleProfilePopup} />
@@ -20,7 +27,7 @@ function App () {
         <ProfilePopup mounted={mountProfilePopup}/>
       </div>
       <div className="products-container">
-        <Product />
+        {productsInfo.map((props) => ( <Product image={props.image} title={props.title} /> ))}
       </div>
     </div>
   );
