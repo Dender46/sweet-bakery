@@ -7,7 +7,7 @@ function Product() {
             <img className="prod-image" alt="" src="images/cakes/cake0.jpg"/>
             <br />
             <h2  className="prod-title" > Product name </h2>
-            <i className="info-button material-icons" >info</i>
+            <i className="info-button material-icons" >info_outline</i>
         </div>
     )
 }

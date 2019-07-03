@@ -37,3 +37,13 @@
 
     color: #828282;
 }
+
+.Product .info-button {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 199px;
+    top: 295px;
+
+    color: #828282;
+}
