@@ -10,15 +10,30 @@
 }
 
 .Product .prod-image {
-    position: absolute;
     width: 250px;
     height: 259px;
-    left: 0px;
-    top: 0px;
 
     border-radius: 16px 16px 0px 0px;
     border-bottom: 4px solid #FBB6C3;
 
     object-fit: cover;
 	overflow: hidden;
+}
+
+.Product .prod-title {
+    position: absolute;
+    width: 170px;
+    left: 27px;
+    top: 292px;
+    bottom: 31px;
+
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+
+    color: #828282;
 }
