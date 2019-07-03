@@ -28,6 +28,10 @@
   left: 28.7%;
   right: 28.7%;
   top: 159px;
+
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 17px;
 }
 
 @keyframes App-logo-spin {
