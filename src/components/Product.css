@@ -1,5 +1,4 @@
 .Product {
-
     position: relative;
     width: 250px;
     height: 350px;
@@ -7,6 +6,8 @@
     box-shadow: 2px 4px 12px rgba(95, 17, 31, 0.15);
     background: #FFFFFF;
     border-radius: 16px;
+
+    margin-right: 34px;
 }
 
 .Product .prod-image {
