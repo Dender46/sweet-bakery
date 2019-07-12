@@ -8,7 +8,6 @@
   height:         360px;
   border-radius:  26px;
 
-  opacity:        0;
   transition:     opacity 0.2s ease-in-out;
 
   background:     #FFFFFF;

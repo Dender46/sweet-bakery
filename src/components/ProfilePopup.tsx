@@ -9,6 +9,9 @@ function ProfilePopup(props : {mounted : boolean}) : any {
         if (props.mounted)
             setShow(true);
         setTimeout( () => setOpacity(props.mounted ? 1 : 0), 10);
+        return () => {
+            setOpacity(0);
+        }
     }, [props.mounted]);
 
     return (
