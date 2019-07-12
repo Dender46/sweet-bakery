@@ -5,12 +5,14 @@
   width:          277px;
   height:         60px;
   margin-bottom:  12px;
+  border-radius:  23px;
+
+  transition:     background 0.2s ease-out;
 }
 
 .SideBarElement:hover {
   cursor:         pointer;
   background:   #FFD4DC;
-  border-radius:  23px;
 }
 
 h3.section-name {
