@@ -14,8 +14,8 @@ function SideBar() {
   const style: React.CSSProperties = {
     position: "absolute",
     height: "346.9px",
-    left: "11.2%",
-    right: "76.77%",
+    left: "9.79%",
+    right: "75.78%",
     top: "159px",
 
     minWidth: "155px"

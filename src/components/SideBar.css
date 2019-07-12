@@ -2,13 +2,15 @@
   display:        flex;
   align-items:    center;
 
-  width:          225px;
+  width:          277px;
   height:         60px;
   margin-bottom:  12px;
 }
 
 .SideBarElement:hover {
   cursor:         pointer;
+  background:   #FFD4DC;
+  border-radius:  23px;
 }
 
 h3.section-name {
@@ -19,15 +21,17 @@ h3.section-name {
 
   display:      flex;
   align-items:  center;
+  margin-left:  30px;
   
   color:        #4F4F4F;
 }
 
 .material-icons.expand_more {
   position:     absolute;
-  right:        0;
+  left:         80.48%;
+  right:        15.55%;
   
-  font-size: 		34px;
+  font-size: 		35px;
   margin-top:   1px;
 
   color: 				#818181;
