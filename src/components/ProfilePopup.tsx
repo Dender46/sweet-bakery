@@ -15,11 +15,14 @@ function ProfilePopup(props : {mounted : boolean}) : any {
     }, [props.mounted]);
 
     return (
-        show && <div
+        show && 
+        <div
             className="ProfilePopup"
             style={{opacity: opacity}}
             onTransitionEnd={ () => setShow(props.mounted)}
-        />
+        >
+            
+        </div>
     );
 }
 

@@ -14,7 +14,8 @@
 
 .avatar-icon {
 	width: 					63px;
-	height:					63px;
+  height:					63px;
+  z-index:        200;
 
   background:		  #fff;
   border-radius:	45px;
