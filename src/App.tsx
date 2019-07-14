@@ -24,7 +24,7 @@ function App () {
       <UpperBar toggleProfilePopup={toggleProfilePopup} />
       <SideBar />
       <div ref={profilePopupRef}>
-        <ProfilePopup mounted={mountProfilePopup}/>
+        <ProfilePopup mounted={mountProfilePopup} profileName="Dmitry Bagandov"/>
       </div>
       <div className="products-container">
         {productsInfo.map((props) => ( <Product image={props.image} title={props.title} /> ))}
