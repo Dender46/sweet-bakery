@@ -29,7 +29,9 @@ function ProfilePopup(props : {mounted : boolean, profileName : String}) : any {
             onTransitionEnd={ () => setShow(props.mounted)}
         >
             <h1 className="profile-name">{props.profileName}</h1>
-            {profilePopupElements.map((props) => ( <ProfilePopupElement icon={props.icon} caption={props.caption} /> ))}
+            <div className="profile-elements">
+                {profilePopupElements.map((props) => ( <ProfilePopupElement icon={props.icon} caption={props.caption} /> ))}
+            </div>
         </div>
     );
 }
@@ -37,8 +39,8 @@ function ProfilePopup(props : {mounted : boolean, profileName : String}) : any {
 function ProfilePopupElement(props : {icon : String, caption : String}) {
     return (
         <div className="ProfilePopupElement">
-            <i className="material-icons noselect">{props.icon}</i>
-            <h3 className="section-name noselect">{props.caption}</h3>
+            <i className="icon material-icons noselect">{props.icon}</i>
+            <h3 className="caption noselect">{props.caption}</h3>
         </div>
     )
 }

@@ -1,7 +1,4 @@
 .ProfilePopup {
-  display:        flex;
-  align-items:    center;
-
   position:       absolute;
   top:            10px;
   right:          80px;
@@ -36,10 +33,37 @@
   color: #333333;
 }
 
-.ProfilePopupElement {
+.ProfilePopup .profile-elements {
   position: absolute;
+  left: 10.39%;
+  right: 25.84%;
+  top: 35.34%;
+  bottom: 10.06%;
+}
+
+.ProfilePopupElement {
   width: 224.5px;
   height: 29.5px;
-  left: 39.5px;
-  top: 126.5px;
+  
+  display: flex;
+  margin-bottom: 27px;
+}
+
+.ProfilePopupElement .icon {  
+  color: #828282;
+  font-size: 32px;
+}
+
+.ProfilePopupElement .caption {
+  width: 160px;
+  margin: 0;
+  margin-left: 40px;
+
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.6em;
+
+  color: #4F4F4F;
 }
