@@ -8,7 +8,7 @@ function ProfilePopup(props : {mounted : boolean}) : any {
     useEffect( () => {
         if (props.mounted)
             setShow(true);
-        setTimeout( () => setOpacity(props.mounted ? 1 : 0), 10);
+        setTimeout( () => setOpacity(props.mounted ? 1 : 0), 30);
         return () => {
             setOpacity(0);
         }
