@@ -1,4 +1,7 @@
 .ProfilePopup {
+  display:        flex;
+  align-items:    center;
+
   position:       absolute;
   top:            10px;
   right:          80px;
@@ -31,4 +34,12 @@
   display: flex;
   align-items: center;
   color: #333333;
+}
+
+.ProfilePopupElement {
+  position: absolute;
+  width: 224.5px;
+  height: 29.5px;
+  left: 39.5px;
+  top: 126.5px;
 }

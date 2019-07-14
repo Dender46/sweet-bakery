@@ -15,7 +15,7 @@
   background:   #FFD4DC;
 }
 
-h3.section-name {
+.SideBarElement h3.section-name {
   font-family:  Noto Sans JP;
   font-style:   normal;
   font-weight:  normal;
@@ -28,7 +28,7 @@ h3.section-name {
   color:        #4F4F4F;
 }
 
-.material-icons.expand_more {
+.SideBarElement .material-icons.expand_more {
   position:     absolute;
   left:         80.48%;
   right:        15.55%;
