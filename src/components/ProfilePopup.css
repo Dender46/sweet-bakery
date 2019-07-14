@@ -33,6 +33,9 @@
   color: #333333;
 }
 
+
+
+
 .ProfilePopup .profile-elements {
   position: absolute;
   left: 10.39%;
@@ -47,6 +50,11 @@
   
   display: flex;
   margin-bottom: 27px;
+}
+
+.ProfilePopupElement:hover {
+  cursor:         pointer;
+  /* background:   #FFD4DC; */
 }
 
 .ProfilePopupElement .icon {  
