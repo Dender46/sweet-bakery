@@ -12,7 +12,7 @@ const sidebarCaptions: Array<String> = [
 
 function SideBar() {
   const style: React.CSSProperties = {
-    position: "absolute",
+    position: "fixed",
     height: "346.9px",
     left: "9.79%",
     right: "75.78%",
