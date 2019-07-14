@@ -33,8 +33,8 @@ function SideBar() {
 function SideBarElement (props : { caption : String }) {
   return (
     <div className="SideBarElement">
-      <h3 className="section-name">{props.caption}</h3>
-      <i className="material-icons md-dark expand_more">chevron_right</i>
+      <h3 className="section-name noselect">{props.caption}</h3>
+      <i className="material-icons md-dark expand_more noselect">chevron_right</i>
     </div>
   );
 }

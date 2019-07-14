@@ -7,7 +7,7 @@ function Product( props : {image: String, title:String} ) {
             <img className="prod-image" alt="" src={"images/cakes/" + props.image}/>
             <br />
             <h2  className="prod-title" > {props.title} </h2>
-            <i className="info-button material-icons" >info_outline</i>
+            <i className="info-button material-icons noselect" >info_outline</i>
         </div>
     )
 }

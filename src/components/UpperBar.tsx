@@ -8,7 +8,7 @@ function UpperBar(props : {toggleProfilePopup : Function}) {
 
   return (
     <div className="UpperBar">
-      <h1 id="brand-name">Sweet Bakery</h1>
+      <h1 className="noselect" id="brand-name">Sweet Bakery</h1>
 
       <div className="bg-drips">
         <div id="bg-drip-left"></div>
@@ -22,8 +22,8 @@ function UpperBar(props : {toggleProfilePopup : Function}) {
 function Avatar (props : { toggleProfilePopup: Function }) {
   return (
     <div className="Avatar" onClick={() => props.toggleProfilePopup()}>
-      <img src='images/avatar-icon.jpg' alt="Profile" className="avatar-icon" />
-      <i className="down-arrow material-icons expand_more">expand_more</i>
+      <img src='images/avatar-icon.jpg' alt="Profile" className="avatar-icon noselect" />
+      <i className="down-arrow material-icons expand_more noselect">expand_more</i>
     </div>
   );
 }
