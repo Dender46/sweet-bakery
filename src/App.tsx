@@ -12,12 +12,14 @@ function App () {
   const [mountProfilePopup, setMountProfilePopup] = useState(false);
   const profilePopupRef: React.RefObject<HTMLDivElement> = React.useRef(null);
 
-  const productsInfo: Array<{image: String, title : String}> = [
+  var productsInfo: Array<{image: String, title : String}> = [
     {image: 'cake0.jpg', title: 'Prod. name'},
     {image: 'cake1.jpg', title: 'Prod. name'},
     {image: 'cake2.jpg', title: 'Prod. name'},
     {image: 'cake3.jpg', title: 'Prod. name'}
   ];
+
+  productsInfo = productsInfo.concat(productsInfo).concat(productsInfo);
 
   return (
     <div className="App">
