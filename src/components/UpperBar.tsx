@@ -20,7 +20,7 @@ function UpperBar(props : {toggleProfilePopup : Function}) {
 function Avatar (props : { toggleProfilePopup: Function }) {
   return (
     <div className="Avatar" onClick={() => props.toggleProfilePopup()}>
-      <img src='images/avatar-icon.jpg' alt="Profile" className="avatar-icon noselect" />
+      <img src={require('../images/avatar-icon.jpg')} alt="Profile" className="avatar-icon noselect" />
       <i className="down-arrow material-icons expand_more noselect">expand_more</i>
     </div>
   );
