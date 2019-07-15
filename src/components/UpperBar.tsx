@@ -2,8 +2,6 @@ import React from 'react';
 import './UpperBar.css';
 import './Avatar.css';
 
-import 'material-design-icons/iconfont/material-icons.css';
-
 function UpperBar(props : {toggleProfilePopup : Function}) {
 
   return (

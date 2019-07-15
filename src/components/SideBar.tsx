@@ -1,6 +1,5 @@
 import React from 'react';
 import './SideBar.css';
-import 'material-design-icons/iconfont/material-icons.css';
 
 const sidebarCaptions: Array<String> = [
   "Cakes",
