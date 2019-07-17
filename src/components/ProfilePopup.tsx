@@ -28,6 +28,7 @@ function ProfilePopup(props : {mounted : boolean, profileName : String}) : any {
             style={{opacity: opacity}}
             onTransitionEnd={ () => setShow(props.mounted)}
         >
+            <img src={require('../images/avatar-icon.jpg')} alt="Profile" className="profile-icon noselect" />
             <h1 className="profile-name">{props.profileName}</h1>
             <div className="profile-elements">
                 {profilePopupElements.map((props) => ( <ProfilePopupElement icon={props.icon} caption={props.caption} /> ))}
