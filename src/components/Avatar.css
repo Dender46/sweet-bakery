@@ -24,7 +24,8 @@
 .down-arrow.material-icons.expand_more {
   position:       absolute;
   right:          0;
-
   margin:         0;
+
+  font-size:      32px;
 	color: 					#664047;
 }
