@@ -69,3 +69,21 @@
 
     transition:         opacity 200ms;
 }
+
+.Product .prod-price {
+    position:           absolute;
+    left:               11%;
+    right:              43%;
+    top:                84%;
+    bottom:             2%;
+
+    font-family:        Noto Sans;
+    font-style:         normal;
+    font-weight:        bold;
+    font-size:          28px;
+    line-height:        41px;
+    display:            flex;
+    align-items:        center;
+
+    color:            #333333;
+}
