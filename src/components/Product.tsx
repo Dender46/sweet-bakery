@@ -2,19 +2,18 @@ import React, { useState } from 'react';
 import './Product.css';
 
 function Product( props : {image: String, title:String} ) : any {
-    const [overlay, setOverlay] = useState(false);
+    const [overlayOpacity, setOverlayOpacity] = useState(0);
 
     return (
-        <div className="Product" onMouseOver={() =>setOverlay(true)} onMouseLeave={() =>setOverlay(false)}>
+        <div className="Product" onMouseOver={() =>setOverlayOpacity(1)} onMouseLeave={() =>setOverlayOpacity(0)}>
             <img className="prod-image noselect" alt="" src={require("../images/cakes/" + props.image)}/>
             <br />
             <h2  className="prod-title" > {props.title} </h2>
             <i className="info-button material-icons noselect" >add_circle_outline</i>
-            {
-                overlay && <div className="prod-overlay">
-                    
-                </div>
-            }
+            
+            <div style={{opacity: overlayOpacity}} className="prod-overlay">
+                
+            </div>
         </div>
     )
 }
