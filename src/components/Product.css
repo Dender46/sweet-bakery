@@ -50,4 +50,11 @@
 
 .Product .info-button {
     cursor:         pointer;
-  }
+}
+
+
+.Product .prod-overlay {
+    background: #828282;
+    width: 50px;
+    height: 50px;
+}

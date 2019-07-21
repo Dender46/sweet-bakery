@@ -29,7 +29,7 @@ function App () {
         <ProfilePopup mounted={mountProfilePopup} profileName="Dmitry Bagandov"/>
       </div>
       <div className="products-container">
-        {productsInfo.map((props) => ( <Product image={props.image} title={props.title} /> ))}
+        {productsInfo.map((props, index) => ( <Product key={index} image={props.image} title={props.title} /> ))}
       </div>
     </div>
   );
